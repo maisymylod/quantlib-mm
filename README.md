@@ -70,6 +70,25 @@ tests/
 └── test_correlation.py
 ```
 
+## Showcase
+
+There's an interactive showcase in `web/` (Next.js + Tailwind + Recharts)
+backed by a FastAPI REST surface in `api/`. Each demo section is wired to
+a function in the library, so moving a slider runs the math live.
+
+```bash
+# Backend (port 8765)
+pip install -e . && pip install -r api/requirements.txt
+uvicorn api.main:app --reload --port 8765
+
+# Frontend (port 3000)
+cd web && npm install
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8765 npm run dev
+```
+
+Production deploys via `render.yaml` (one Render Web Service for the API,
+one Render Static Site for the frontend).
+
 ## License
 
 MIT
