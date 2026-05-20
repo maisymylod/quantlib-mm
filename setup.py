@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="quantlib-mm",
     version="0.1.0",
-    description="Python quantitative finance library — Monte Carlo, option pricing, portfolio optimization, and risk analysis",
+    description="Python quantitative finance library: Monte Carlo, option pricing, portfolio optimization, and risk analysis",
     author="Maisy Mylod",
     author_email="maisymylod@gmail.com",
     url="https://github.com/maisymylod/quantlib-mm",

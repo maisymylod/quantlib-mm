@@ -1,4 +1,4 @@
-"""Tests for quantlib_mm.risk — RiskMetrics class."""
+"""Tests for quantlib_mm.risk (RiskMetrics class)."""
 
 import numpy as np
 import pytest
