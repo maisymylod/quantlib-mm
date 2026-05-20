@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-navy text-white font-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tightish;
+  }
+}
+
+@layer components {
+  .num-display {
+    @apply font-display font-bold tabular-nums tracking-tighter2;
+  }
+}
+
+/* Range slider styling -- consistent across sections */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  outline: none;
+}
+input[type="range"].on-lavender {
+  background: rgba(15, 20, 55, 0.25);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #d4f23f;
+  border: 2px solid #0f1437;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(212, 242, 63, 0.15);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #d4f23f;
+  border: 2px solid #0f1437;
+  cursor: pointer;
+}
