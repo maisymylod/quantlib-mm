@@ -58,13 +58,13 @@ class Greeks:
     # ------------------------------------------------------------------
 
     def delta(self) -> float:
-        """dV/dS — rate of change of option value with respect to spot."""
+        """dV/dS. Rate of change of option value with respect to spot."""
         if self.option_type == "call":
             return float(norm.cdf(self._d1))
         return float(norm.cdf(self._d1) - 1.0)
 
     def gamma(self) -> float:
-        """d²V/dS² — second derivative of option value w.r.t. spot.
+        """d²V/dS². Second derivative of option value w.r.t. spot.
 
         Gamma is identical for calls and puts.
         """
@@ -73,7 +73,7 @@ class Greeks:
         )
 
     def theta(self) -> float:
-        """dV/dt — time decay expressed **per calendar day**.
+        """dV/dt. Time decay expressed **per calendar day**.
 
         The annualised theta is divided by 365 so the result represents
         the expected daily change in option value, all else being equal.
@@ -91,7 +91,7 @@ class Greeks:
         return float(annual_theta / 365.0)
 
     def vega(self) -> float:
-        """dV/dσ — sensitivity to volatility per 1 percentage-point move.
+        """dV/dσ. Sensitivity to volatility per 1 percentage-point move.
 
         The raw vega (dV per unit change in σ) is divided by 100 so the
         result represents the value change for a 0.01 (1 %) increase in
@@ -101,7 +101,7 @@ class Greeks:
         return float(raw_vega / 100.0)
 
     def rho(self) -> float:
-        """dV/dr — sensitivity to interest rate per 1 percentage-point move.
+        """dV/dr. Sensitivity to interest rate per 1 percentage-point move.
 
         Divided by 100 so the result represents the value change for a
         0.01 (1 %) increase in the risk-free rate.

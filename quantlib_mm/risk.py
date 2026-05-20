@@ -91,7 +91,7 @@ class RiskMetrics:
     def sortino_ratio(
         self, risk_free_rate: float = 0.0, periods: int = 252
     ) -> float:
-        """Sortino ratio — excess return per unit of downside deviation.
+        """Sortino ratio: excess return per unit of downside deviation.
 
         Parameters
         ----------
@@ -113,7 +113,7 @@ class RiskMetrics:
     def calmar_ratio(
         self, risk_free_rate: float = 0.0, periods: int = 252
     ) -> float:
-        """Calmar ratio — annualised return divided by maximum drawdown.
+        """Calmar ratio: annualised return divided by maximum drawdown.
 
         Parameters
         ----------

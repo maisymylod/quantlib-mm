@@ -1,4 +1,4 @@
-"""Tests for quantlib_mm.greeks — Black-Scholes analytical Greeks."""
+"""Tests for quantlib_mm.greeks (Black-Scholes analytical Greeks)."""
 
 import pytest
 from quantlib_mm.greeks import Greeks
